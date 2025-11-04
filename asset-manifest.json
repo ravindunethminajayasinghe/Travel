@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Travel/static/css/main.d7863b9b.css",
-    "main.js": "/Travel/static/js/main.7f94d8df.js",
+    "main.css": "/Travel/static/css/main.af950438.css",
+    "main.js": "/Travel/static/js/main.326dfa29.js",
     "static/js/453.cf0652b6.chunk.js": "/Travel/static/js/453.cf0652b6.chunk.js",
-    "static/media/SriLankaMap.svg": "/Travel/static/media/SriLankaMap.db8532bb04d273ffa7f6c1646d5837b5.svg",
+    "static/media/SriLankaMap.svg": "/Travel/static/media/SriLankaMap.1a880893db6f5bc2919d8561aea75bf8.svg",
     "index.html": "/Travel/index.html",
-    "main.d7863b9b.css.map": "/Travel/static/css/main.d7863b9b.css.map",
-    "main.7f94d8df.js.map": "/Travel/static/js/main.7f94d8df.js.map",
+    "main.af950438.css.map": "/Travel/static/css/main.af950438.css.map",
+    "main.326dfa29.js.map": "/Travel/static/js/main.326dfa29.js.map",
     "453.cf0652b6.chunk.js.map": "/Travel/static/js/453.cf0652b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7863b9b.css",
-    "static/js/main.7f94d8df.js"
+    "static/css/main.af950438.css",
+    "static/js/main.326dfa29.js"
   ]
 }
