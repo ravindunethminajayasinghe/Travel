@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>Developed with ❤️ by Kavindu Bimsara Fernando</p>
+        <p>Developed with ❤️ by Kavindu Bimsara Fernando, Concept by Ravindu Nethmina Jayasinghe</p>
       </div>
     </footer>
   );

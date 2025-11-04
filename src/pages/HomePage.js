@@ -19,18 +19,21 @@ const HomePage = () => {
   return (
     <div className="homepage-container">
       <h1>
-        <span className="discover">Discover</span> 
+        <span className="discover">Discover</span>
         <span className="sri-lanka">Sri Lanka</span>
         <br />
         <span className="with-names">with Ravindu & Isura</span>
       </h1>
+
+      <SriLankaMap 
+        onClick={handleDistrictClick} 
+        className="map" 
+        style={{ cursor: 'pointer', transition: 'transform 0.5s' }} 
+        onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'} 
+        onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'} 
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} 
+      />
       <p>Click on a district to explore travel locations.</p>
-      
-      {/* This is the magic! The entire SVG becomes a single 
-        component, and the click handler will "bubble up" 
-        from the path that was clicked.
-      */}
-      <SriLankaMap onClick={handleDistrictClick} className="map" />
     </div>
   );
 };
