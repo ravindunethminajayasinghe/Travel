@@ -40,6 +40,36 @@ h1 {
   stroke-width: 1px;
 }
 
+@media screen and (max-width: 768px) {
+  .homepage-container {
+    padding: 1rem;
+    padding-top: 60px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .with-names {
+    font-size: 1.2rem;
+  }
+
+  .map {
+    width: 95%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .with-names {
+    font-size: 1rem;
+  }
+}
+
 /* This targets the individual district paths *inside* your SVG 
  when it has the class "map".
 */

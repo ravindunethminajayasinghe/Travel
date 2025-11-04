@@ -1,8 +1,8 @@
 // src/pages/HomePage.js
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ReactComponent as SriLankaMap } from '../components/SriLankaMap.svg';
-import './HomePage.css'; // We'll create this file next
+import './HomePage.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
