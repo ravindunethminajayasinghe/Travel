@@ -18,12 +18,12 @@ export const provinces = {
   northern: {
     name: 'Northern Province',
     capital: 'Jaffna',
-    districts: ['jaffna', 'killinochchi', 'mannar']
+    districts: ['jaffna', 'killinochchi', 'mannar', 'Vavuniya', "Mullaitivu"]
   },
   eastern: {
     name: 'Eastern Province',
     capital: 'Trincomalee',
-    districts: ['tricomalee', 'batticaloa', 'ampara']
+    districts: ['trincomalee', 'batticaloa', 'ampara']
   },
   northWestern: {
     name: 'North Western Province',
@@ -202,7 +202,7 @@ export const travelData = {
       { name: 'Pottuvil Lagoon & Beach', description: 'Scenic lagoon meets sea, nature & snorkelling.' }
     ]
   },
-  tricomalee: {
+  trincomalee: {
     province: 'eastern',
     name: 'Trincomalee District',
     locations: [
@@ -218,6 +218,24 @@ export const travelData = {
       { name: 'Vavuniya-Kilinochchi Rural Region', description: 'Less tourist-crowded zone, rural and coastal possibilities.' },
       { name: 'Jaffna Peninsula Access (from Kilinochchi)', description: 'Gateway towards northern cultural/temple tours.' },
       { name: 'Pooneryn Lagoon & Fishing Villages', description: 'Coastal lagoon and local life experience.' }
+    ]
+  },
+  Vavuniya: {
+    province: 'northern',
+    name: 'Vavuniya District',
+    locations: [
+      { name: 'Vavuniya Town & Surroundings', description: 'Cultural and local town experience in northern Sri Lanka.' },
+      { name: 'Mannar Access (from Vavuniya)', description: 'Gateway towards Mannar Island and coastal tours.' },
+      { name: 'Local Markets & Rural Life', description: 'Experience traditional markets and village life.' }
+    ]
+  },
+  Mullaitivu: {
+    province: 'northern',
+    name: 'Mullaitivu District',
+    locations: [
+      { name: 'Mullaitivu Beaches', description: 'Untouched beaches with serene coastal views.' },
+      { name: 'Nagar Kovil Temple', description: 'Ancient Hindu temple with cultural significance.' },
+      { name: 'Local Fishing Villages', description: 'Experience traditional fishing communities and their way of life.' }
     ]
   },
   jaffna: {

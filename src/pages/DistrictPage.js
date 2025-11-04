@@ -14,29 +14,31 @@ const DistrictPage = () => {
   // Handle cases where the district doesn't exist in our data
   if (!district) {
     return (
-      <div>
-        <h2>District not found!</h2>
-        <Link to="/">Back to Map</Link>
+      <div className="not-found-container">
+      <h2 className="not-found-title">District not found!</h2>
+      <Link to="/" className="back-link">← Back to Map</Link>
       </div>
     );
   }
 
   return (
-    <div className="district-container">
-      <Link to="/" className="back-link">← Back to Map</Link>
+    <main className="district-container">
+      <nav aria-label="Navigation">
+        <Link to="/" className="back-link" aria-label="Back to Map">← Back to Map</Link>
+      </nav>
       
       <h1>{district.name}</h1>
       <p>Top travel locations:</p>
       
-      <div className="locations-list">
+      <section className="locations-list" aria-label="Travel Locations">
         {district.locations.map((location) => (
-          <div key={location.name} className="location-card">
+          <article key={location.name} className="location-card">
             <h3>{location.name}</h3>
             <p>{location.description}</p>
-          </div>
+          </article>
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

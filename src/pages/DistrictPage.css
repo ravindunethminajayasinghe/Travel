@@ -1,0 +1,116 @@
+.district-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.back-link {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+.back-link:hover {
+  color: #e67e22;
+  background-color: #666;
+}
+
+.district-container h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.district-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #666, #e67e22);
+  border-radius: 2px;
+}
+
+.district-container > p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.locations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.location-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.location-card h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.location-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #666, #e67e22);
+  border-radius: 1.5px;
+}
+
+.location-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .district-container {
+    padding: 15px;
+  }
+
+  .district-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .locations-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .back-link {
+    margin-bottom: 20px;
+  }
+}

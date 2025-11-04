@@ -14,19 +14,17 @@ const Footer = () => {
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
         <div className="footer-section mobile-half">
           <h4>Contact</h4>
           <ul className="contact-list">
-            <li><a href="mailto:kavindbimsara@gmail.com">kavindbimsara@gmail.com</a></li>
-            <li><a href="tel:+94710119042">+94 710119042</a></li>
+            <li><a href="https://www.instagram.com/kavindubimsara" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Discover Sri Lanka</p>
+        <p>Developed with ❤️ by Kavindu Bimsara Fernando</p>
       </div>
     </footer>
   );

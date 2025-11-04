@@ -80,5 +80,5 @@ h1 {
 }
 
 .map path:hover {
-  fill: #006400; /* Change to a highlight color on hover */
+  fill: #e67e22; /* Change to a highlight color on hover */
 }
