@@ -1,0 +1,54 @@
+/* src/pages/HomePage.css */
+
+.homepage-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.discover {
+  color: #2c3e50;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sri-lanka {
+  color: #e67e22;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+.with-names {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.map {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  stroke: #fff; /* This adds a white border between districts */
+  stroke-width: 1px;
+}
+
+/* This targets the individual district paths *inside* your SVG 
+ when it has the class "map".
+*/
+.map path {
+  fill: #ccc;
+  cursor: pointer;
+  transition: fill 0.2s ease-in-out;
+}
+
+.map path:hover {
+  fill: #006400; /* Change to a highlight color on hover */
+}
