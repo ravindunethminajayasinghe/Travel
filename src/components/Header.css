@@ -43,30 +43,92 @@
   position: relative;
   padding: 1rem;
   cursor: pointer;
+  display: inline-block;
 }
 
 .mega-menu {
-  position: absolute;
-  top: 100%;
+  position: fixed;
   left: 0;
   right: 0;
+  top: 70px;
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1.5rem;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  transform-origin: top;
+}
+
+.mega-menu.enter {
+  animation: slideDown 0.3s ease forwards;
+}
+
+.mega-menu.exit {
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .mega-menu-content {
+  position: relative;
   max-width: 1200px;
+  min-width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+  animation: fadeIn 0.4s ease forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.province-column {
+  min-width: 250px;
+  animation: fadeInRight 0.4s ease forwards;
+  opacity: 0;
 }
 
 .province-column h3 {
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e67e22;
 }
 
 .province-column ul {
@@ -76,26 +138,93 @@
 }
 
 .province-column li {
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   color: #666;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.2s, padding-left 0.2s;
 }
 
 .province-column li:hover {
-  color: #000;
+  color: #e67e22;
+  padding-left: 0.5rem;
 }
 
 @media (min-width: 768px) {
   .desktop-nav {
     display: block;
   }
-  
+
   .menu-button {
     display: none;
   }
-  
+
   .logo {
     margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mega-menu-content {
+    min-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu-content {
+    min-width: 300px;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Adjusted delays for all provinces */
+.province-column:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.province-column:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.province-column:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.province-column:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.province-column:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.province-column:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.province-column:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.province-column:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.province-column:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

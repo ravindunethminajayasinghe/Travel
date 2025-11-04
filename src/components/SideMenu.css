@@ -13,7 +13,7 @@
   top: 0;
   left: -300px;
   width: 300px;
-  height: 100vh;
+  height: 100%;
   background-color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
@@ -46,13 +46,13 @@
   color: #666;
 }
 
-.districts-list {
+.districts-list.expanded {
   padding: 20px;
 }
 
 .district-item {
-  padding: 12px;
-  margin-bottom: 8px;
+  padding: 5px;
+  /* margin-bottom: 8px; */
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.2s;
@@ -65,9 +65,10 @@
 /* Add hamburger menu button styles */
 .menu-button {
   display: none;
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  /* position: fixed; */
+  /* top: 20px; */
+  /* left: 20px; */
+  height: auto;
   z-index: 999;
   background: white;
   border: none;
@@ -116,15 +117,30 @@
 
 .districts-list {
   margin-left: 15px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.province-section .districts-list.expanded {
+  max-height: 500px; /* Large enough to contain all districts */
+  transition: max-height 0.5s ease-in;
 }
 
 .district-item {
-  padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 4px;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.district-item:hover {
-  background-color: #f5f5f5;
+.districts-list.expanded .district-item {
+  transform: translateX(0);
+  opacity: 1;
 }
+
+.districts-list.expanded .district-item:nth-child(1) { transition-delay: 0.1s; }
+.districts-list.expanded .district-item:nth-child(2) { transition-delay: 0.15s; }
+.districts-list.expanded .district-item:nth-child(3) { transition-delay: 0.2s; }
+.districts-list.expanded .district-item:nth-child(4) { transition-delay: 0.25s; }
+.districts-list.expanded .district-item:nth-child(5) { transition-delay: 0.3s; }

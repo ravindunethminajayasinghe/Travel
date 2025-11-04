@@ -49,19 +49,17 @@ const SideMenu = ({ isOpen, onClose }) => {
                   {expandedProvinces[provinceId] ? '−' : '+'}
                 </span>
               </div>
-              {expandedProvinces[provinceId] && (
-                <div className="districts-list">
-                  {province.districts.map((districtId) => (
-                    <div
-                      key={districtId}
-                      className="district-item"
-                      onClick={() => handleDistrictClick(districtId)}
-                    >
-                      {travelData[districtId].name}
-                    </div>
-                  ))}
-                </div>
-              )}
+              <div className={`districts-list ${expandedProvinces[provinceId] ? 'expanded' : ''}`}>
+                {province.districts.map((districtId) => (
+                  <div
+                    key={districtId}
+                    className="district-item"
+                    onClick={() => handleDistrictClick(districtId)}
+                  >
+                    {travelData[districtId].name}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
